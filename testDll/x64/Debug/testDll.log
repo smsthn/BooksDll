@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  testDll.cpp
+  LINK : C:\Users\SMSTHN\source\repos\BooksDll\x64\Debug\testDll.exe not found or not built by the last incremental link; performing full link
+  testDll.vcxproj -> C:\Users\SMSTHN\source\repos\BooksDll\x64\Debug\testDll.exe

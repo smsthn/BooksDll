@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\smsthn\source\repos\booksdll\booksdll\</FILEPATH>
+      <FILENAME>book.h</FILENAME>
+      <LINE>21</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'BookNmSpc::Book::m_page_number' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>BookNmSpc::Book::{ctor}</FUNCTION>
+    <DECORATED>??0Book@BookNmSpc@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@3@00@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
