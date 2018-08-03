@@ -16,6 +16,7 @@ BookNmSpc::Books::Books()
 void BookNmSpc::Books::add_book(const std::string& name, const std::string& catagory, const std::string& reading_status, std::vector<std::string>* tags, int32_t page_number, std::vector<std::string>*  book_notes)
 {
 	all_books.push_back(std::make_unique<BookNmSpc::Book>(name, catagory, reading_status, tags, page_number, book_notes));
+	std::sort(all_books.begin(), all_books.end());
 }
 void BookNmSpc::Books::remove_book(const std::string& book_name)
 {
@@ -39,6 +40,8 @@ void BookNmSpc::Books::modify_book(const std::string& old_name, const std::strin
 			itr->get()->m_catagory = catagory;
 			itr->get()->m_reading_status = reading_status;
 			itr->get()->m_page_number = page_number;
+
+			std::sort(all_books.begin(), all_books.end());
 			return;
 		}
 	}
@@ -46,6 +49,7 @@ void BookNmSpc::Books::modify_book(const std::string& old_name, const std::strin
 void BookNmSpc::Books::add_tag(std::string tag)
 {
 	all_tags.push_back(tag);
+	std::sort(all_tags.begin(), all_tags.end());
 }
 
 void BookNmSpc::Books::add_book_note(const std::string & book_name,const std::string & note)

@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <algorithm>
 #include "Book.h"
 namespace BookNmSpc
 {
