@@ -67,6 +67,13 @@ void BookNmSpc::Books::remove_book_note(const std::string & book_name, int32_t i
 
 //
 
+
+
+BookNmSpc::Book BookNmSpc::Books::get_book(std::string book_name)
+{
+	for (const auto &book : all_books)if (book->m_name == book_name)return *book;
+}
+
 //Getters
 std::vector<std::string> BookNmSpc::Books::get_all_catagories()
 {

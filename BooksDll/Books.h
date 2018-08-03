@@ -20,6 +20,8 @@ namespace BookNmSpc
 
 	public:
 		//getters
+		virtual Book get_book(std::string book_name) = 0;
+
 		virtual std::vector<std::string> get_all_catagories() = 0;
 		virtual std::vector<std::string> get_all_reading_status() = 0;
 
@@ -62,6 +64,8 @@ namespace BookNmSpc
 		void remove_book_note(const std::string& book_name, int32_t index) override;
 
 		//getters
+		Book get_book(std::string book_name) override;
+
 		std::vector<std::string> get_all_catagories() override;
 		std::vector<std::string> get_all_reading_status() override;
 
@@ -76,9 +80,9 @@ namespace BookNmSpc
 } // namespace BookNmSpc
 extern  BOOKSDLL_API  std::unique_ptr<BookNmSpc::BooksInterface>   create_the_books();
 extern "C" BOOKSDLL_API void delete_the_books(BookNmSpc::BooksInterface* the_book);// Now Not Needed
-const std::vector<std::string> all_catagories{ "Any","Math", "GameDev", "CSharp", "Java", "Cs", "Cpp", "Emmbedded", "PyAndMl", "Art", "Android" };
-extern BOOKSDLL_API const std::vector<std::string>& get_all_catagories();
-const std::vector<std::string> all_reading_status {"Any", "Reading", "WannaRead", "WannaRead2", "YetToWannaRead","DelayedReading","Finished","Dropped"};
+static const std::vector<std::string> all_catagories{ "Any","Math", "GameDev", "CSharp", "Java", "Cs", "Cpp", "Emmbedded", "PyAndMl", "Art", "Android" };
+extern BOOKSDLL_API  const std::vector<std::string>& get_all_catagories();
+static const std::vector<std::string> all_reading_status {"Any", "Reading", "WannaRead", "WannaRead2", "YetToWannaRead","DelayedReading","Finished","Dropped"};
 extern BOOKSDLL_API const std::vector<std::string>& get_all_reading_status();
  
 
